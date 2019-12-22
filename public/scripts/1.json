@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Emilee Furse",
+    "email": "efurse0@shutterfly.com",
+    "colour": "blue",
+    "image": "1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Shannan Myner",
+    "email": "smyner1@jigsy.com",
+    "colour": "red",
+    "image": "2.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Anthia Wellbank",
+    "email": "awellbank2@slideshare.net",
+    "colour": "orange",
+    "image": "3.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Arlette Wallman",
+    "email": "awallman3@cargocollective.com",
+    "colour": "cyan",
+    "image": "4.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Amos Thoday",
+    "email": "athoday4@archive.org",
+    "colour": "purple",
+    "image": "5.jpg"
+  }
+]
+

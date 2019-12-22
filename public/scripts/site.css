@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Blinker&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.card, .card-header, .btn, .table, .form-control {
+    border-radius: 0!important;
+}
+
+.img-test{
+    max-width:80px;
+    float:right;
+}
+
+.btn {
+    font-family: 'Blinker', sans-serif;
+}
+
+.card-index .card-index-info{
+    min-height:80px!important;
+}
+
+.card-index .list-group-item{
+    background-color:transparent;
+}
+
+.card-index .card-index-img {
+    max-width: 80px;
+    border:1px solid rgba(255,255,255,0.1);
+}

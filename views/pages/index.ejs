@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body>
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <div class="container">
+
+        <h1><%=title %></h1>
+
+        <% if (sqlresult.length > 0) { %>
+
+            <div class="row">
+
+                <% sqlresult.forEach((p, index) => { %>
+            
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 card-index">
+                        <div class="card rounded-0 bg-dark text-white shadow mb-4">
+                            <div class="card-header font-weight-bold"><%=p.Name%></div>
+                            <div class="card-body">
+                                <img src="/img/<%=p.Image%>?<%=p.Guid%>" class="img-fluid float-right ml-2 mb-1 shadow card-index-img">
+                                <p class="font-weight-bold"><%=p.JobTitle%></p>
+                                <p class="justify-content-center card-index-info">
+                                    <%=p.Summary%>
+                                </p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <ul class="list-group list-group-flush bg-secondary">
+                                            <li class="list-group-item"><i class="fa fa-envelope"></i> <a href="<%=p.Email%>" class="text-white text-decoration-none"><%=p.Email%></a></li>
+                                            <li class="list-group-item"><div>Rating: <%-vwFuncTest2(index)%></div></li>
+                                            <li class="list-group-item">Colour: <span style="color:<%=p.Colour%>;"><%=p.Colour%></span></li>
+                                            <li class="list-group-item">Shape: <i><%=vwFuncTest(p.Shape)%></i></li><!-- vwFuncTest passed from index.js -->
+                                            <li class="list-group-item">Enabled: <i class="fa fa-<%=(p.Enabled ? 'check text-success' : 'times text-danger')%>"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <% }); %>
+
+            </div>
+
+        <% } %>
+
+    </div>
+
+    <% include ../partials/footer %>
+
+</body>
+</html>

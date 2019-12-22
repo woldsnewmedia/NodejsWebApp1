@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-web-app1",
+  "version": "0.0.0",
+  "description": "NodejsWebApp1",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^1.0.0",
+    "express": "^4.17.1",
+    "formidable": "^1.2.1",
+    "html-entities": "^1.2.1",
+    "mssql": "^5.1.0",
+    "mysql": "^2.17.1",
+    "nodemailer": "^6.4.2",
+    "querystring": "^0.2.0",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.5",
+    "url": "^0.11.0",
+    "uuid": "^3.3.3"
+  }
+}

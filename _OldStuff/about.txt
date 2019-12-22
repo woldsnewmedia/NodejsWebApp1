@@ -1,0 +1,10 @@
+
+myutils.js contains util functions
+mssql1.js and mysql1.js are sql server and mysql connection / loop tests
+server1.js is a site server test thing.  (Note - i had to npm install ejs and also add it to package.json)
+
+
+visual studio - right click on an ejs file, open with, select "HTML (Web Forms) Editor" (set as Default) - allows syntax highlight/i'sense etc
+* I think routes are like controllers (?)
+
+
