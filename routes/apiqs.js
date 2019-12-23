@@ -10,6 +10,8 @@ const myutils = require('../myutils');
 
 const request = require('request');
 
+const moment = require('moment');
+
 const api_test_url = 'https://my.api.mockaroo.com/JOBSDEC2019.json?key=efbb00b0';
 
 module.exports = {
@@ -26,6 +28,7 @@ module.exports = {
             }
 
             res.render('pages/apiqs', {
+                moment: moment,
                 api_url: api_test_url,
                 api_data: q_body
             });

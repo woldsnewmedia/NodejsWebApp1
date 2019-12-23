@@ -29,3 +29,16 @@ body {
     max-width: 80px;
     border:1px solid rgba(255,255,255,0.1);
 }
+
+.table-apiqs{
+    font-size:0.8em;
+}
+
+    /*.table-apiqs thead th, .table-apiqs tbody td {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }*/
+
+.apiqs-p{
+    font-weight:600!important;
+}

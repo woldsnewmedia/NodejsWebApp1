@@ -9,6 +9,12 @@ module.exports = {
 
     },
 
+    makeShortDate: function (datein) {
+        let d = Date(datein); // new Date();
+        //d = datein;
+        return String(d.getDate()) + '/' + String(d.getMonth()) + '/' + String(d.getFullYear());
+    }
+
 
 
 };
