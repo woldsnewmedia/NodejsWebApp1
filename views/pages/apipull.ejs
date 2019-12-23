@@ -9,20 +9,22 @@
         <%- include('../partials/header') %>
     </header>
 
-    <div class="container">
+    <div class="main-outer-div">
 
-        <h1>API Pull</h1>
+        <div class="container">
 
-        <p>This is just to test using Node to get some test data from an API having to get a token first.</p>
+            <h1>API Pull</h1>
 
-        <p>API URL: <span class="font-weight-bold"><%=api_url%></span></p>
+            <p>This is just to test using Node to get some test data from an API having to get a token first.</p>
 
-        <div class="card shadow">
-            <div class="card-header">
-                Response
-            </div>
-            <div class="card-body">
-                <% api_data.forEach((p, index) => { %>
+            <p>API URL: <span class="font-weight-bold"><%=api_url%></span></p>
+
+            <div class="card shadow">
+                <div class="card-header">
+                    Response
+                </div>
+                <div class="card-body">
+                    <% api_data.forEach((p, index) => { %>
 
                     <div class="row">
                         <div class="col-md-12 mb-1"><span class="font-weight-bold"><%=p.title%></span></div>
@@ -45,20 +47,22 @@
 
                     <hr />
 
-                <% }); %>
+                    <% }); %>
 
+                </div>
             </div>
-        </div>
 
-        <hr />
+            <hr />
 
-        <div class="card shadow">
-            <div class="card-header">
-                API Token
+            <div class="card shadow">
+                <div class="card-header">
+                    API Token
+                </div>
+                <div class="card-body">
+                    <%=api_token%>
+                </div>
             </div>
-            <div class="card-body">
-                <%=api_token%>
-            </div>
+
         </div>
 
     </div>

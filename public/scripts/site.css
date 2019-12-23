@@ -4,8 +4,12 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+.main-outer-div{
+    margin-top:64px;
+}
+
 .card, .card-header, .btn, .table, .form-control {
-    border-radius: 0!important;
+    border-radius: 0 !important;
 }
 
 .img-test{
@@ -41,4 +45,9 @@ body {
 
 .apiqs-p{
     font-weight:600!important;
+}
+
+.mongo-list-img {
+    max-width: 80px;
+    border: 1px solid rgba(255,255,255,0.1);
 }

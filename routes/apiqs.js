@@ -27,6 +27,11 @@ module.exports = {
                 return;
             }
 
+            // Update the image field from the api (temporary as mockaroo api data uses dummyimage.com)
+            q_body.forEach((p, index) => {
+                p.image = "https://lorempixel.com/200/200/animals/?refresh="+index;
+            });
+
             res.render('pages/apiqs', {
                 moment: moment,
                 api_url: api_test_url,

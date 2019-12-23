@@ -9,58 +9,62 @@
         <%- include('../partials/header') %>
     </header>
 
-    <div class="container">
+    <div class="main-outer-div">
 
-        <h1>Upload</h1>
+        <div class="container">
 
-        <div class="row">
-            <div class="col-md-6">
-                <form action="fileupload" method="post" enctype="multipart/form-data">
+            <h1>Upload</h1>
 
-                    <div class="row">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="fileupload" method="post" enctype="multipart/form-data">
 
-                        <div class="form-group col-md-12">
-                            <label class="control-label" for="txttest1">Some text</label>
-                            <input type="text" name="txtbox1" class="form-control" maxlength="255" />
-                        </div>
+                        <div class="row">
 
-                        <div class="form-group col-md-12">
-                            <!--<label class="d-none d-md-block">&nbsp;</label>-->
-                            <div class="custom-file">
-                                <input type="file" name="filetoupload" class="custom-file-input" id="customFile" />
-                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            <div class="form-group col-md-12">
+                                <label class="control-label" for="txttest1">Some text</label>
+                                <input type="text" name="txtbox1" class="form-control" maxlength="255" />
                             </div>
+
+                            <div class="form-group col-md-12">
+                                <!--<label class="d-none d-md-block">&nbsp;</label>-->
+                                <div class="custom-file">
+                                    <input type="file" name="filetoupload" class="custom-file-input" id="customFile" />
+                                    <label class="custom-file-label" for="customFile">Choose file</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-12">
+                                <input type="submit" class="btn btn-primary" />
+                            </div>
+
                         </div>
 
-                        <div class="form-group col-md-12">
-                            <input type="submit" class="btn btn-primary" />
-                        </div>
+                    </form>
 
+                </div>
+                <div class="col-md-6">
+
+                    <div>
+                        <div class="b-1 postresult">Waiting ..... </div>
+                        <br />
+                        <button class="btn btn-success btn-post">Get Ajax data</button>
                     </div>
 
-                </form>
+                    <hr />
 
-            </div>
-            <div class="col-md-6">
+                    <div>
+                        <div class="b-1 theresult">Waiting ..... </div>
+                        <br />
+                        <button class="btn btn-secondary btn-test">Get AJAX data</button>
+                    </div>
 
-                <div>
-                    <div class="b-1 postresult">Waiting ..... </div>
-                    <br />
-                    <button class="btn btn-success btn-post">Get Ajax data</button>
                 </div>
-
-                <hr />
-
-                <div>
-                    <div class="b-1 theresult">Waiting ..... </div>
-                    <br />
-                    <button class="btn btn-secondary btn-test">Get AJAX data</button>
-                </div>
-
             </div>
+
+
+
         </div>
-
-
 
     </div>
 

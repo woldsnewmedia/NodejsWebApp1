@@ -9,14 +9,15 @@
         <%- include('../partials/header') %>
     </header>
 
-    <div class="container">
+    <div class="main-outer-div">
 
-        <h1><%=title %></h1>
+        <div class="container">
 
-        <% if (sqlresult.length > 0) { %>
+            <h1><%=title %></h1>
+
+            <% if (sqlresult.length > 0) { %>
 
             <div class="row">
-
                 <% sqlresult.forEach((p, index) => { %>
             
                     <div class="col-lg-6 col-md-12 col-sm-12 col-12 card-index">
@@ -33,10 +34,13 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <ul class="list-group list-group-flush bg-secondary">
-                                            <li class="list-group-item"><i class="fa fa-envelope"></i> <a href="<%=p.Email%>" class="text-white text-decoration-none"><%=p.Email%></a></li>
-                                            <li class="list-group-item"><div>Rating: <%-vwFuncTest2(index)%></div></li>
-                                            <li class="list-group-item">Colour: <span style="color:<%=p.Colour%>;"><%=p.Colour%></span></li>
-                                            <li class="list-group-item">Shape: <i><%=vwFuncTest(p.Shape)%></i></li><!-- vwFuncTest passed from index.js -->
+                                            <li class="list-group-item"><i class="fa fa-envelope mr-1"></i><a href="<%=p.Email%>" class="text-white text-decoration-none"><%=p.Email%></a></li>
+                                            <li class="list-group-item">
+                                                <div>Rating: <%-vwFuncTest2(index)%></div>
+                                            </li>
+                                            <li class="list-group-item">Colour: <span style="color: <%=p.Colour%>;"><%=p.Colour%></span></li>
+                                            <li class="list-group-item">Shape: <i><%=vwFuncTest(p.Shape)%></i></li>
+                                            <!-- vwFuncTest passed from index.js ( Make text upper case ) -->
                                             <li class="list-group-item">Enabled: <i class="fa fa-<%=(p.Enabled ? 'check text-success' : 'times text-danger')%>"></i></li>
                                         </ul>
                                     </div>
@@ -49,7 +53,9 @@
 
             </div>
 
-        <% } %>
+            <% } %>
+
+        </div>
 
     </div>
 

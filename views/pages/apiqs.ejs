@@ -9,20 +9,22 @@
         <%- include('../partials/header') %>
     </header>
 
-    <div class="container">
+    <div class="main-outer-div">
 
-        <h1>API QS Key</h1>
+        <div class="container">
 
-        <p>This is just to test using Node to get some test data from an API using a Key in the QueryString.</p>
+            <h1>API QS Key</h1>
 
-        <p>API URL: <span class="font-weight-bold"><%=api_url%></span></p>
+            <p>This is just to test using Node to get some test data from an API using a Key in the QueryString.</p>
 
-        <div class="card shadow">
-            <div class="card-header">
-                API Jobs
-            </div>
-            <div class="card-body">
-                <% api_data.forEach((p, index) => { %>
+            <p>API URL: <span class="font-weight-bold"><%=api_url%></span></p>
+
+            <div class="card shadow">
+                <div class="card-header">
+                    API Jobs
+                </div>
+                <div class="card-body">
+                    <% api_data.forEach((p, index) => { %>
 
                     <div class="row">
                         <div class="col-md-12 mb-1">
@@ -42,11 +44,11 @@
                                     </tr>
                                     <tr>
                                         <td>Salary</td>
-                                        <td class="apiqs-p text-info"><%=p.salary%></td>
+                                        <td class="apiqs-p text-success"><%=p.salary%></td>
                                     </tr>
                                     <tr>
                                         <td>Closes</td>
-                                        <td class="apiqs-p text-info"><%=moment(p.closingdate).format("DD-MM-YYYY")%></td>
+                                        <td class="apiqs-p text-warning"><%=moment(p.closingdate).format("DD-MM-YYYY")%></td>
                                     </tr>
                                 </table>
                             </div>
@@ -68,9 +70,11 @@
 
                     <hr />
 
-                <% }); %>
+                    <% }); %>
 
+                </div>
             </div>
+
         </div>
 
     </div>

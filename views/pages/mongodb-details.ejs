@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <div class="main-outer-div">
+
+        <div class="container">
+
+            <h1>MongoDB - Details</h1>
+
+            <% if(sqlresult) { %>
+
+                <div class="card shadow">
+
+                    <div class="card-header">
+                        <%=sqlresult.Name%>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-12">
+                                <table class="table">                                    
+                                    <tr><td>Email:</td><td><%=sqlresult.Email%></td></tr>
+                                    <tr><td>Job Title:</td><td><%=sqlresult.JobTitle%></td></tr>
+                                    <tr><td>Colour:</td><td><%=sqlresult.Colour%></td></tr>
+                                    <tr><td>Shape:</td><td><%=sqlresult.Shape%></td></tr>
+                                    <tr><td>Summary:</td><td><%=sqlresult.Summary%></td></tr> 
+                                </table>
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
+                                <img src="<%=(sqlresult.Image.startsWith('http') ? sqlresult.Image:'/img/'+sqlresult.Image)%>" class="img-fluid shadow" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            <% } else { %>
+
+                <span class="text-center">Nothing found ..... <i class="fa fa-frown"></i></span>
+
+            <% } %>
+
+            <br />
+            <a href="/mongodb" class="text-primary">Back to list</a>
+
+        </div>
+
+    </div>
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

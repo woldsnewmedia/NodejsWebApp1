@@ -9,9 +9,65 @@
         <%- include('../partials/header') %>
     </header>
 
-    <div class="container">
+    <div class="main-outer-div">
 
-        <h1>MongoDB</h1>
+        <div class="container">
+
+            <h1>MongoDB</h1>
+
+            <p>The following documents are in the MongoDB People collection.</p>
+
+            <div class="float-right mb-2">
+                <a href="/mongodb-new/" class="btn btn-outline-success btn-sm"><i class="fa fa-plus"></i></a>
+            </div>
+
+            <table class="table w-100">
+                <thead class="bg-light">
+                    <tr>
+                        <th>Name</th>
+                        <th>Job Title</th>
+                        <th>Image</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% if(sqlresult.length>0) { %>
+
+                    <% sqlresult.forEach((p, index) => { %>
+            
+                        <tr>
+                            <td><%=p.Name%></td>
+                            <td><%=myutils.strLeft(p.JobTitle,20)%></td>
+                            <td>
+                                <img src="<%=(p.Image.startsWith('http') ? p.Image:'/img/'+p.Image)%>" class="mongo-list-img shadow" />
+                            </td>
+                            <td>
+                                <div class="float-right">
+                                    <a href="/mongodb/<%=p._id%>" class="btn btn-outline-info btn-sm"><i class="fa fa-eye"></i></a>
+                                    <a href="/mongodb-modify/<%=p._id%>" class="btn btn-outline-warning btn-sm"><i class="fa fa-edit"></i></a>
+                                    <a href="/mongodb-remove/<%=p._id%>" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+
+                    <% }); %>
+
+                <% } else { %>
+
+                    <tr>
+                        <td colspan="5">
+                            <span class="text-center">Nothing found ..... <i class="fa fa-frown"></i></span>
+                        </td>
+                    </tr>
+
+                    <% } %>
+
+                </tbody>
+
+            </table>
+
+        </div>
 
     </div>
 
