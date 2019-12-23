@@ -2,23 +2,7 @@ var spinnerhtml = '<i class="fas fa-spinner fa-spin"></i>';
 
 $(document).ready(function () {
 
-    // Ajax result test
-    $(".btn-test").click(function (e) {
-
-        e.preventDefault();
-
-        $(".theresult").html(spinnerhtml);
-
-        $(".theresult").load("/ajaxtest", function (r, s, x) {
-            if (s == "success")
-                $(".theresult").html(r);
-            if (s == "error")
-                alert("Error: " + x.status + ": " + x.statusText);
-        });
-
-    });
-
-    // POST test button
+    // POST test button - green button
     $(".btn-post").click(function (e) {
 
         e.preventDefault();
@@ -81,4 +65,23 @@ $(document).ready(function () {
 
     });
 
+    // Ajax result test - grey button
+    $(".btn-test").click(function (e) {
+
+        e.preventDefault();
+
+        $(".theresult").html(spinnerhtml);
+
+        $(".theresult").load("/ajaxtest", function (r, s, x) {
+            if (s == "success")
+                $(".theresult").html(r);
+            if (s == "error")
+                alert("Error: " + x.status + ": " + x.statusText);
+        });
+
+    });
+
+
 });
+
+

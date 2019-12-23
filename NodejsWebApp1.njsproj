@@ -45,8 +45,12 @@
     <Content Include="public\scripts\2.json" />
     <Content Include="public\scripts\site.css" />
     <Content Include="public\scripts\site.js" />
+    <Content Include="routes\mongodb.js" />
+    <Content Include="routes\apiqs.js" />
     <Content Include="routes\apipull.js" />
     <Content Include="routes\upload.js" />
+    <Content Include="views\pages\mongodb.ejs" />
+    <Content Include="views\pages\apiqs.ejs" />
     <Content Include="views\pages\apipull.ejs" />
     <Content Include="views\pages\upload.ejs" />
     <Content Include="_OldStuff\about.txt" />

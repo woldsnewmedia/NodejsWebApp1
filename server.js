@@ -56,10 +56,16 @@ const transporter = nodemailer.createTransport({
 
 // Route constants / .js files
 const { getHomePage } = require('./routes/index');
+
 const { getAboutPage } = require('./routes/about');
-const { getAboutPrivacyPage } = require('./routes/about');
+const { getAboutPrivacyPage } = require('./routes/about');  // Test page
+
 const { getUploadPage } = require('./routes/upload');
+
 const { getAPIPullPage } = require('./routes/apipull');
+const { getAPIQSPage } = require('./routes/apiqs');
+
+const { getMongoDBPage } = require('./routes/mongodb');
 
 // Route get
 app.get('/', getHomePage);
@@ -67,6 +73,8 @@ app.get('/about', getAboutPage);
 app.get('/about/privacy', getAboutPrivacyPage);
 app.get('/upload', getUploadPage);
 app.get('/apipull', getAPIPullPage);
+app.get('/apiqs', getAPIQSPage);
+app.get('/mongodb', getMongoDBPage);
 app.get('/ajaxtest', function (req, res) {
     // Quick shortcut test function without a route js etc
     let d = new Date();
