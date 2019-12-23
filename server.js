@@ -117,8 +117,8 @@ app.post('/fileupload', function (req, res) {
                 }
             }));
             //transporter.sendMail({
-            //    from: 'noreply@wnmprojects.co.uk',
-            //    to: 'woldsnewmedia@hotmail.co.uk',
+            //    from: 'noreply@xxyyzz.co.uk',
+            //    to: 'who-ever@hotmail.co.uk',
             //    subject: 'This is the subject!',
             //    html: '..... and I am the message'
             //}, function (err, info) {
