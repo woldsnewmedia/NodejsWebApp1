@@ -119,6 +119,7 @@ app.get('/randomimage', function (req, res) {
                     return;
                 }
                 res.write(data);
+                res.end();
             });
 
         });

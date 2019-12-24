@@ -6,12 +6,7 @@
  * 
  */
 
-const myutils = require('../myutils');
-
 const request = require('request');
-
-const url = require('url');
-const querystring = require('querystring');
 
 // Use my webapi portfolios data which has JWT auth on
 const api_login_url = 'https://wnmprojects.co.uk/api/auth/login';
@@ -22,15 +17,6 @@ const api_test_url = 'https://wnmprojects.co.uk/api/portfolios';
 module.exports = {
 
     getAPIPullPage: (req, res) => {
-
-        // This is just to see how 'querystring' works
-        let parsedUrl = url.parse(req.protocol + '://' + req.get('host') + req.originalUrl);
-        console.log("parsedurl = " + parsedUrl);
-        let parsedQs = querystring.parse(parsedUrl.query);
-        console.log("parsedqs = " + JSON.stringify(parsedQs));
-        console.log("alpha=" + parsedQs.alpha);
-        console.log("beta=" + parsedQs.beta);
-        console.log("gamma=" + parsedQs.gamma);
 
         let api_token = '';
 

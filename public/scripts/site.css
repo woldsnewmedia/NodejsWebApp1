@@ -55,3 +55,184 @@ body {
     max-width: 80px;
     border: 1px solid rgba(255,255,255,0.1);
 }
+
+/*
+
+    Legacy CSS
+
+*/
+
+.brand-text {
+    /*font-family: 'Open Sans', sans-serif !important;*/
+    font-family: 'Noto Sans', sans-serif;
+}
+
+@media(max-width:375px) {
+    .brand-text {
+        font-size: 1.4em !important;
+    }
+}
+
+.hide {
+    display: none !important;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+@media (max-width:767px) {
+    .hidden-xs {
+        display: none !important
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    .hidden-sm {
+        display: none !important
+    }
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    .hidden-md {
+        display: none !important
+    }
+}
+
+@media (min-width:1200px) {
+    .hidden-lg {
+        display: none !important
+    }
+}
+
+.visible-print {
+    display: none !important
+}
+
+@media print {
+    .visible-print {
+        display: block !important
+    }
+
+    table.visible-print {
+        display: table !important
+    }
+
+    tr.visible-print {
+        display: table-row !important
+    }
+
+    td.visible-print,
+    th.visible-print {
+        display: table-cell !important
+    }
+}
+
+.visible-print-block {
+    display: none !important
+}
+
+@media print {
+    .visible-print-block {
+        display: block !important
+    }
+}
+
+.visible-print-inline {
+    display: none !important
+}
+
+@media print {
+    .visible-print-inline {
+        display: inline !important
+    }
+}
+
+.visible-print-inline-block {
+    display: none !important
+}
+
+@media print {
+    .visible-print-inline-block {
+        display: inline-block !important
+    }
+}
+
+@media print {
+    .hidden-print {
+        display: none !important
+    }
+}
+
+.w-auto {
+    width: auto !important;
+}
+
+.w-5 {
+    width: 5%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+.w-15 {
+    width: 15% !important;
+}
+
+.w-20 {
+    width: 20% !important;
+}
+
+.w-30 {
+    width: 30% !important;
+}
+
+.w-33 {
+    /*-webkit-box-flex: 0;
+    -ms-flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;*/
+    max-width: 31.3333333333%;
+    width: 31.3333333333%;
+}
+
+.w-35 {
+    width: 35% !important;
+}
+
+.w-55 {
+    width: 55% !important;
+}
+
+.w-60 {
+    width: 60% !important;
+}
+
+.w-65 {
+    width: 65% !important;
+}
+
+.w-70 {
+    width: 70% !important;
+}
+
+.w-80 {
+    width: 80% !important;
+}
+
+.w-90 {
+    width: 90% !important;
+}
+
+.text-opacity-50 {
+    opacity: 0.5;
+}
+
+.text-opacity-25 {
+    opacity: 0.25;
+}
+
+.text-opacity-100 {
+    opacity: 1;
+}
+
