@@ -23,6 +23,7 @@ module.exports = {
 
     getAPIPullPage: (req, res) => {
 
+        // This is just to see how 'querystring' works
         let parsedUrl = url.parse(req.protocol + '://' + req.get('host') + req.originalUrl);
         console.log("parsedurl = " + parsedUrl);
         let parsedQs = querystring.parse(parsedUrl.query);

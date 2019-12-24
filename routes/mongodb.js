@@ -18,18 +18,10 @@ module.exports = {
             }
             let dbo = db.db("mongodb1");
             dbo.collection("people").find({}).sort({Name: 1}).toArray(function (err, sqlresult) {
-            //dbo.collection("people").find({}, { projection: { Guid: 1, Name: 1, JobTitle: 1 } }).toArray(function (err, result) {
-            //dbo.collection("people").find({ JobTitle: /stat/i }, { projection: { Guid: 1, Name: 1, JobTitle: 1, Colour: 1 } }).sort({ Name: -1 }).limit(10).toArray(function (err, result) {
                 if (err) {
                     console.error(err);
                     return;
                 }
-
-                // Update the image field from the api (temporary as mockaroo api data uses dummyimage.com)
-                //sqlresult.forEach((p, index) => {
-                //    p.Image = "https://lorempixel.com/200/200/animals/?refresh=" + index;
-                //});
-
                 db.close();
                 res.render('pages/mongodb', {
                     myutils: myutils,
@@ -44,8 +36,6 @@ module.exports = {
     // Details
     getMongoDBDetailsPage: (req, res) => {
 
-        //let pId = req.params.id;
-
         mc.connect(mcurl, { useNewUrlParser: true, useUnifiedTopology: true }, function (err, db) {
             if (err) {
                 console.error(err);
@@ -56,11 +46,6 @@ module.exports = {
                 if (err) {
                     console.error(err);
                     return;
-                }
-
-                // Update the image field from the api (temporary as mockaroo api data uses dummyimage.com)
-                if (sqlresult) {
-                    sqlresult.Image = "https://lorempixel.com/200/200/animals/";
                 }
 
                 db.close();
@@ -76,7 +61,9 @@ module.exports = {
 
     // Add new load form
     getMongoDBAddNewPage: (req, res) => {
-        res.render('pages/mongodb-new', {});
+        res.render('pages/mongodb-new', {
+            myutils: myutils
+        });
     },
 
     // Add new post/save
@@ -111,7 +98,6 @@ module.exports = {
                         return;
                         }                        
                         db.close();
-                        //console.log(sqlresult.insertedId);  // new id if needed
                         res.redirect("/mongodb/" + sqlresult.insertedId);
                 });
             });
@@ -180,7 +166,6 @@ module.exports = {
                         return;
                     }
                     db.close();
-                    //console.log(sqlresult.insertedId);  // new id if needed
                     res.redirect("/mongodb/" + req.params.id);
                 });
             });
@@ -204,7 +189,6 @@ module.exports = {
                     return;
                 }
                 db.close();
-                //console.log(sqlresult.insertedId);  // new id if needed
                 res.redirect("/mongodb/");
             });
         });

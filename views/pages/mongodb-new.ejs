@@ -49,11 +49,15 @@
                 <div class="row">
                     <div class="form-group col-md-6">
                         <label for="colour">Colour</label>
-                        <input type="text" class="form-control" name="colour" id="colour" />
+                        <select name="colour" id="colour" class="custom-select">
+                            <%-myutils.createSortedSelectListFromArray(['Pink','Turquoise','Violet','Red','Yellow','Orange','Purple'])%>
+                        </select>
                     </div>
                     <div class="form-group col-md-6">
                         <label for="shape">Shape</label>
-                        <input type="text" class="form-control" name="shape" id="shape" />
+                        <select name="shape" id="shape" class="custom-select">
+                            <%-myutils.createSortedSelectListFromArray(['Circle','Square','Triangle','Oblong','Rectangle','Rhombus'])%>
+                        </select>
                     </div>
                 </div>
                

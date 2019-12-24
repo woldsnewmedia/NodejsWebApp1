@@ -86,11 +86,49 @@ app.post('/mongodb-modify/:id', postMongoDBModifyPage);
 
 app.get('/mongodb-remove/:id', getMongoDBDeletePage);
 
+
 app.get('/ajaxtest', function (req, res) {
     // Quick shortcut test function without a route js etc
     let d = new Date();
     res.write(String(d.getDate()) + '/' + String(d.getMonth()) + '/' + String(d.getFullYear()));
     res.end();
+});
+
+// Return a random image from public/img directory
+app.get('/randomimage', function (req, res) {
+
+    let p = path.join(__dirname, '/public/img/');
+
+    fs.readdir(p, function (err, items) {
+        if (err) {
+            console.error(err);
+            return;
+        }
+
+        let f = path.join(p, items[Math.floor(Math.random() * items.length)]);
+
+        fs.access(f, fs.F_OK, (err) => {
+            if (err) {
+                console.error(err)
+                return
+            }
+
+            fs.readFile(f, function (err, data) {   // check if file exists
+                if (err) {
+                    console.error(err);
+                    return;
+                }
+                res.write(data);
+            });
+
+        });
+        
+    });
+
+
+
+
+
 });
 
 // Route post
@@ -102,7 +140,7 @@ app.post('/fileupload', function (req, res) {
                 console.error(err);
                 return;
             }
-            let savepath = 'c:/temp/';
+            let savepath = path.join(__dirname, '/public/img/'); 
             if (fs.exists(savepath, function (e) {
                 if (files.filetoupload.name != "") {
                     let oldpath = files.filetoupload.path;

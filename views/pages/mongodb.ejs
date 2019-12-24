@@ -40,7 +40,7 @@
                             <td><%=p.Name%></td>
                             <td><%=myutils.strLeft(p.JobTitle,32)%></td>
                             <td>
-                                <img src="<%=(p.Image.startsWith('http') ? p.Image : '/img/'+p.Image)%>" class="mongo-list-img shadow" />
+                                <img src="<%=p.Image%>" class="mongo-list-img shadow" />
                             </td>
                             <td>
                                 <div class="float-right">
