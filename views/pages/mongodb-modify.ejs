@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head') %>
+</head>
+<body>
+
+    <header>
+        <%- include('../partials/header') %>
+    </header>
+
+    <div class="main-outer-div">
+
+        <div class="container">
+
+            <h1>MongoDB - Modify</h1>
+
+            <form action="" method="post" enctype="multipart/form-data">
+
+                <!--<input type="hidden" class="form-control" name="id" id="id" value="<%=(sqlresult._id ? sqlresult._id : "") %>" />
+                <input type="hidden" class="form-control" name="guid" id="guid" value="<%=(sqlresult.Guid ? sqlresult.Guid : "") %>" />-->
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" value="<%=(sqlresult.Name ? sqlresult.Name : "") %>" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" value="<%=(sqlresult.Email ? sqlresult.Email : "") %>" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="jobtitle">Job Title</label>
+                        <input type="text" class="form-control" name="jobtitle" id="jobtitle" value="<%=(sqlresult.JobTitle ? sqlresult.JobTitle : "") %>" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="image">Image URL</label>
+                        <input type="text" class="form-control" name="image" id="image" value="<%=(sqlresult.Image ? sqlresult.Image : "") %>" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="summary">Summary</label>
+                        <textarea rows="5" name="summary" id="summary" class="form-control"><%=(sqlresult.Summary ? sqlresult.Summary : "") %></textarea>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="colour">Colour</label>
+                        <input type="text" class="form-control" name="colour" id="colour" value="<%=(sqlresult.Colour ? sqlresult.Colour : "") %>" />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="shape">Shape</label>
+                        <input type="text" class="form-control" name="shape" id="shape" value="<%=(sqlresult.Shape ? sqlresult.Shape : "") %>" />
+                    </div>
+                </div>
+               
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <button type="submit" class="btn btn-primary">Modify</button>
+                    </div>
+                </div>
+
+            </form>
+
+            <br />
+            <a href="/mongodb" class="text-primary">Back to list</a>
+
+        </div>
+
+    </div>
+
+    <%- include('../partials/footer') %>
+
+</body>
+</html>

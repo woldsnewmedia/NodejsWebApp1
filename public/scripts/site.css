@@ -47,6 +47,10 @@ body {
     font-weight:600!important;
 }
 
+.btn-smaller {
+    padding: .05rem .35rem .06rem 0.5rem;
+}
+
 .mongo-list-img {
     max-width: 80px;
     border: 1px solid rgba(255,255,255,0.1);

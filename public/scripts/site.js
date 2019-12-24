@@ -81,6 +81,17 @@ $(document).ready(function () {
 
     });
 
+    // MongoDB list delete button click
+    //$(".mongodb-delete-button").click(function (e) {
+
+    //    if (confirm('Are you sure?')) {
+
+    //    } else {
+    //        e.preventDefault();
+    //    }
+
+    //});
+
 
 });
 

@@ -49,6 +49,8 @@
     <Content Include="routes\apiqs.js" />
     <Content Include="routes\apipull.js" />
     <Content Include="routes\upload.js" />
+    <Content Include="views\pages\mongodb-modify.ejs" />
+    <Content Include="views\pages\mongodb-new.ejs" />
     <Content Include="views\pages\mongodb-details.ejs" />
     <Content Include="views\pages\mongodb.ejs" />
     <Content Include="views\pages\apiqs.ejs" />

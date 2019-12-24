@@ -38,15 +38,15 @@
             
                         <tr>
                             <td><%=p.Name%></td>
-                            <td><%=myutils.strLeft(p.JobTitle,20)%></td>
+                            <td><%=myutils.strLeft(p.JobTitle,32)%></td>
                             <td>
-                                <img src="<%=(p.Image.startsWith('http') ? p.Image:'/img/'+p.Image)%>" class="mongo-list-img shadow" />
+                                <img src="<%=(p.Image.startsWith('http') ? p.Image : '/img/'+p.Image)%>" class="mongo-list-img shadow" />
                             </td>
                             <td>
                                 <div class="float-right">
                                     <a href="/mongodb/<%=p._id%>" class="btn btn-outline-info btn-sm"><i class="fa fa-eye"></i></a>
                                     <a href="/mongodb-modify/<%=p._id%>" class="btn btn-outline-warning btn-sm"><i class="fa fa-edit"></i></a>
-                                    <a href="/mongodb-remove/<%=p._id%>" class="btn btn-outline-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    <a onclick="return confirm('Are you sure?')" href="/mongodb-remove/<%=p._id%>" class="btn btn-outline-danger btn-sm mongodb-delete-button"><i class="fa fa-trash"></i></a>
                                 </div>
                             </td>
                         </tr>
@@ -57,7 +57,7 @@
 
                     <tr>
                         <td colspan="5">
-                            <span class="text-center">Nothing found ..... <i class="fa fa-frown"></i></span>
+                            <span class="text-center mb-5">Nothing found ..... <i class="fa fa-frown"></i></span>
                         </td>
                     </tr>
 

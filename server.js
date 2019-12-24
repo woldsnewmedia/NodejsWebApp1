@@ -65,7 +65,7 @@ const { getUploadPage } = require('./routes/upload');
 const { getAPIPullPage } = require('./routes/apipull');
 const { getAPIQSPage } = require('./routes/apiqs');
 
-const { getMongoDBListPage, getMongoDBDetails } = require('./routes/mongodb');
+const { getMongoDBListPage, getMongoDBDetailsPage, getMongoDBAddNewPage, postMongoDBAddNewPage, getMongoDBModifyPage, postMongoDBModifyPage, getMongoDBDeletePage } = require('./routes/mongodb');
 
 // Route get
 app.get('/', getHomePage);
@@ -74,8 +74,18 @@ app.get('/about/privacy', getAboutPrivacyPage);
 app.get('/upload', getUploadPage);
 app.get('/apipull', getAPIPullPage);
 app.get('/apiqs', getAPIQSPage);
+
 app.get('/mongodb', getMongoDBListPage);
-app.get('/mongodb/:id', getMongoDBDetails);
+app.get('/mongodb/:id', getMongoDBDetailsPage);
+
+app.get('/mongodb-new', getMongoDBAddNewPage);
+app.post('/mongodb-new', postMongoDBAddNewPage);
+
+app.get('/mongodb-modify/:id', getMongoDBModifyPage);
+app.post('/mongodb-modify/:id', postMongoDBModifyPage);
+
+app.get('/mongodb-remove/:id', getMongoDBDeletePage);
+
 app.get('/ajaxtest', function (req, res) {
     // Quick shortcut test function without a route js etc
     let d = new Date();

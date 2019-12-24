@@ -21,6 +21,9 @@
 
                     <div class="card-header">
                         <%=sqlresult.Name%>
+                        <div class="float-right">
+                            <a href="/mongodb-modify/<%=sqlresult._id%>" class="btn btn-outline-warning btn-smaller"><i class="fa fa-edit"></i></a>
+                        </div>
                     </div>
 
                     <div class="card-body">
@@ -44,7 +47,7 @@
 
             <% } else { %>
 
-                <span class="text-center">Nothing found ..... <i class="fa fa-frown"></i></span>
+                <span class="text-center mb-5">Nothing found ..... <i class="fa fa-frown"></i></span>
 
             <% } %>
 
