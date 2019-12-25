@@ -24,7 +24,7 @@ db.connect(function (err) {
 });
 global.db = db;
 
-const port = process.env.PORT || 1336;
+const port = process.env.PORT || 5000; //1336;
 
 const http = require('http');
 const express = require('express');
@@ -94,7 +94,7 @@ app.get('/ajaxtest', function (req, res) {
     res.end();
 });
 
-// Return a random image from public/img directory
+// Return a random image from public/img directory - I think coming from a db in the real world would be preferable!
 app.get('/randomimage', function (req, res) {
 
     let p = path.join(__dirname, '/public/img/');
@@ -125,10 +125,6 @@ app.get('/randomimage', function (req, res) {
         });
         
     });
-
-
-
-
 
 });
 

@@ -31,16 +31,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="myutils.js" />
-    <Content Include="public\img\1.jpg" />
-    <Content Include="public\img\1.png" />
-    <Content Include="public\img\2.jpg" />
-    <Content Include="public\img\2.png" />
-    <Content Include="public\img\3.jpg" />
-    <Content Include="public\img\3.png" />
-    <Content Include="public\img\4.jpg" />
-    <Content Include="public\img\4.png" />
-    <Content Include="public\img\5.jpg" />
-    <Content Include="public\img\5.png" />
+    <Content Include="public\img\2cec802b-3790-4339-8466-1b9d60fc04c7.jpg" />
+    <Content Include="public\img\4226E26D-BF6F-6441-874A-3534A37A8AB6.jpg" />
+    <Content Include="public\img\4E00D5D1-156E-FF4F-B625-678E1DA464D4.jpg" />
+    <Content Include="public\img\4F546715-D3EA-8F40-90A7-79E92C2854F2.jpg" />
+    <Content Include="public\img\515BA3A7-4D21-4D47-9BB3-336BE6271705.jpg" />
+    <Content Include="public\img\5F61B7D8-1763-294F-8B37-D30498D4C38A.jpg" />
+    <Content Include="public\img\A1023E73-2865-8444-BE63-031B8BE46D37.jpg" />
+    <Content Include="public\img\aad0dcb7-59d0-4cbb-9e99-18d0588631dc.jpg" />
+    <Content Include="public\img\AB652EA7-5B06-D64F-BC09-E3EEC6C9DFBA.jpg" />
+    <Content Include="public\img\be6b3634-67ae-4f99-952e-6abcd317d442.jpg" />
+    <Content Include="public\img\cc22c66e-81db-46b4-82f1-02d58db3b9f0.jpg" />
+    <Content Include="public\img\EB737273-6E23-1642-B8BB-3BAECD860071.jpg" />
+    <Content Include="public\img\f09db0e7-d383-4f3f-9939-c5cf84e1abb6.jpg" />
     <Content Include="public\scripts\1.json" />
     <Content Include="public\scripts\2.json" />
     <Content Include="public\scripts\site.css" />

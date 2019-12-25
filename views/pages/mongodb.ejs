@@ -26,8 +26,8 @@
                     <tr>
                         <th>Name</th>
                         <th class="hidden-xs">Job Title</th>
-                        <th class="hidden-xs">Image</th>
-                        <th></th>
+                        <th class="hidden-xs hidden-sm">Image</th>
+                        <th class="mongo-table-tool-width"></th>
                     </tr>
                 </thead>
 
@@ -39,10 +39,10 @@
                         <tr>
                             <td><%=p.Name%></td>
                             <td class="hidden-xs"><%=myutils.strLeft(p.JobTitle,32)%></td>
-                            <td class="hidden-xs">
+                            <td class="hidden-xs hidden-sm">
                                 <img src="<%=p.Image%>?i=<%=index%>" class="mongo-list-img shadow" />
                             </td>
-                            <td>
+                            <td class="mongo-table-tool-width">
                                 <div class="float-right">
                                     <a href="/mongodb/<%=p._id%>" class="btn btn-outline-info btn-sm"><i class="fa fa-eye"></i></a>
                                     <a href="/mongodb-modify/<%=p._id%>" class="btn btn-outline-warning btn-sm"><i class="fa fa-edit"></i></a>

@@ -28,17 +28,13 @@
 
                     <div class="card-body">
                         <div class="row">
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-12">
-                                <table class="table">                                    
-                                    <tr><td>Email:</td><td><%=sqlresult.Email%></td></tr>
-                                    <tr><td>Job Title:</td><td><%=sqlresult.JobTitle%></td></tr>
-                                    <tr><td>Colour:</td><td><%=sqlresult.Colour%></td></tr>
-                                    <tr><td>Shape:</td><td><%=sqlresult.Shape%></td></tr>
-                                    <tr><td>Summary:</td><td><%=sqlresult.Summary%></td></tr> 
-                                </table>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12 col-12">
-                                <img src="<%=sqlresult.Image%>" class="img-fluid shadow" />
+                            <div class="col-lg-12 col-md-21 col-sm-12 col-12">
+                                <img src="<%=sqlresult.Image%>" class="img-fluid shadow float-right ml-2 mb-2 mongo-details-img" />
+                                <p class="hidden-xs">Email: <%=sqlresult.Email%></p>
+                                <p class="hidden-xs">Job Title: <%=sqlresult.JobTitle%></p>
+                                <p class="hidden-xs">Colour: <%=sqlresult.Colour%></p>
+                                <p class="hidden-xs">Shape: <%=sqlresult.Shape%></p>
+                                <p class="hidden-xs">Summary: <%=sqlresult.Summary%></p>
                             </div>
                         </div>
                     </div>

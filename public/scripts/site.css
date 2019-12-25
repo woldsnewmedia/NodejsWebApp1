@@ -53,7 +53,10 @@ body {
 
 .mongo-list-img {
     max-width: 80px;
-    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.mongo-details-img {
+    max-width: 128px;
 }
 
 /*
@@ -85,6 +88,11 @@ body {
     .hidden-xs {
         display: none !important
     }
+
+    .mongo-table-tool-width{
+        width:50%!important;
+    }
+
 }
 
 @media (min-width:768px) and (max-width:991px) {
