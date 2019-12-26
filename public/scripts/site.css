@@ -8,7 +8,7 @@ body {
     margin-top:64px;
 }
 
-.card, .card-header, .btn, .table, .form-control {
+.card, .card-header, .btn, .table, .form-control, .alert {
     border-radius: 0 !important;
 }
 
@@ -243,4 +243,7 @@ body {
 .text-opacity-100 {
     opacity: 1;
 }
+
+
+
 

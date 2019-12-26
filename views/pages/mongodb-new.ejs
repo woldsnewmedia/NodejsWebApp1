@@ -15,58 +15,89 @@
 
             <h1>MongoDB - Add New</h1>
 
+            <% if(Object.keys(errors).length>0) { %>
+
+                <div class="alert alert-danger alert-dismissible">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <h5>Please correct the following errors:-</h5>
+
+                    <ul>
+
+                    <% 
+                        Object.keys(errors).forEach(function (item) {
+                    %>
+                      <li><%=errors[item].msg%></li>                        
+                    <%
+                        });
+                    %>
+
+                    </ul>
+
+                </div>
+
+            <% } %>
+
             <form action="" method="post" enctype="multipart/form-data">
 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" name="name" id="name" />
+                        <label for="Name">Name</label>
+                        <input type="text" class="form-control" name="Name" id="Name" value="<%=(sqlresult.Name ? sqlresult.Name : "")%>" />
+                        <div class="<%=(errors['Name']?errors['Name'].msg:'hide')%>"><span class="text-danger"><%=(errors['Name']?errors['Name'].msg:'')%></span></div>
+
                     </div>
                     <div class="form-group col-md-6">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" name="email" id="email" />
+                        <input type="email" class="form-control" name="Email" id="Email" value="<%=(sqlresult.Email ? sqlresult.Email : "")%>" />
+                        <div class="<%=(errors['Email']?errors['Email'].msg:'hide')%>"><span class="text-danger"><%=(errors['Email']?errors['Email'].msg:'')%></span></div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="jobtitle">Job Title</label>
-                        <input type="text" class="form-control" name="jobtitle" id="jobtitle" />
+                        <label for="JobTitle">Job Title</label>
+                        <input type="text" class="form-control" name="JobTitle" id="JobTitle" value="<%=(sqlresult.JobTitle ? sqlresult.JobTitle : "")%>" />
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="image">Image URL</label>
-                        <input type="text" class="form-control" name="image" id="image" />
+                        <label for="Image">Image URL</label>
+                        <input type="text" class="form-control" name="Image" id="Image" value="<%=(sqlresult.Image ? sqlresult.Image : "")%>" />
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-12">
-                        <label for="summary">Summary</label>
-                        <textarea rows="5" name="summary" id="summary" class="form-control"></textarea>
+                        <label for="Summary">Summary</label>
+                        <textarea rows="5" name="Summary" id="Summary" class="form-control"><%=(sqlresult.Summary ? sqlresult.Summary : "")%></textarea>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="form-group col-md-6">
-                        <label for="colour">Colour</label>
-                        <select name="colour" id="colour" class="custom-select">
-                            <%-myutils.createSortedSelectListFromArray(['Pink','Turquoise','Violet','Red','Yellow','Orange','Purple'])%>
+                        <label for="Colour">Colour</label>
+                        <select name="Colour" id="Colour" class="custom-select">
+                            <%-myutils.createSortedSelectListFromArray(['Pink','Turquoise','Violet','Red','Yellow','Orange','Purple'], (sqlresult.Colour ? sqlresult.Colour : "" ))%>
                         </select>
                     </div>
                     <div class="form-group col-md-6">
-                        <label for="shape">Shape</label>
-                        <select name="shape" id="shape" class="custom-select">
-                            <%-myutils.createSortedSelectListFromArray(['Circle','Square','Triangle','Oblong','Rectangle','Rhombus'])%>
+                        <label for="Shape">Shape</label>
+                        <select name="Shape" id="Shape" class="custom-select">
+                            <%-myutils.createSortedSelectListFromArray(['Circle','Square','Triangle','Oblong','Rectangle','Rhombus'], (sqlresult.Shape ? sqlresult.Shape : "" ) )%>
                         </select>
                     </div>
-                </div>
-               
-
-                <div class="row">
-                    <div class="form-group col-md-12">
-                <button type="submit" class="btn btn-primary">Add</button>
+                    <div class="form-group col-md-6">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="Enabled" name="Enabled" value="1">
+                            <label class="custom-control-label" for="Enabled">Enabled</label>
                         </div>
                     </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <button type="submit" class="btn btn-primary">Add</button>
+                    </div>
+                </div>
 
             </form>
 
