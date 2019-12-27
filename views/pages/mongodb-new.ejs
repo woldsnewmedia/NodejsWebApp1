@@ -15,27 +15,7 @@
 
             <h1>MongoDB - Add New</h1>
 
-            <% if(Object.keys(errors).length>0) { %>
-
-                <div class="alert alert-danger alert-dismissible">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    <h5>Please correct the following errors:-</h5>
-
-                    <ul>
-
-                    <% 
-                        Object.keys(errors).forEach(function (item) {
-                    %>
-                      <li><%=errors[item].msg%></li>                        
-                    <%
-                        });
-                    %>
-
-                    </ul>
-
-                </div>
-
-            <% } %>
+            <%- include('../partials/validationalert') %>
 
             <form action="" method="post" enctype="multipart/form-data">
 

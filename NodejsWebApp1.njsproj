@@ -59,6 +59,7 @@
     <Content Include="views\pages\apiqs.ejs" />
     <Content Include="views\pages\apipull.ejs" />
     <Content Include="views\pages\upload.ejs" />
+    <Content Include="views\partials\validationalert.ejs" />
     <Content Include="_OldStuff\about.txt" />
     <Content Include="routes\about.js" />
     <Content Include="routes\index.js" />
