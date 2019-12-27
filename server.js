@@ -4,11 +4,6 @@ const myutils = require('./myutils');
 
 const request = require('request');
 
-//const cookieParser = require('cookie-parser');
-
-//const url = require('url');
-//const querystring = require('querystring');
-
 const mysql = require("mysql");
 const db_conn = {
     user: 'root',
@@ -33,8 +28,6 @@ const express = require('express');
 
 const app = express();
 app.set('view engine', 'ejs');
-
-//app.use(cookieParser());
 
 const uuidv1 = require('uuid/v1');
 
@@ -196,7 +189,6 @@ var server = app.listen(port, function () {
     //i += '\x1b[33m\x1b[41m' + app_name + '\x1b[40m\n';
     //i += '\x1b[36m' + __dirname + '\n' + __filename + '\n';
     console.log(i);
-    console.log("TESTME = " + myutils.testme());
 });
 
 

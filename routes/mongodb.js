@@ -1,8 +1,5 @@
 const myutils = require('../myutils');
 
-// const cookieParser = require('cookie-parser');
-// const csrf = require('csurf');
-// const csrfProtection = csrf({ cookie: true })
 const formidable = require('formidable');
 
 const uuidv1 = require('uuid/v1');
@@ -33,7 +30,6 @@ module.exports = {
                 });
             });
         });
-
 
     },
 
@@ -84,6 +80,7 @@ module.exports = {
                 console.error(err);
                 return;
             }
+
 
             // Validation
             let errors = {};

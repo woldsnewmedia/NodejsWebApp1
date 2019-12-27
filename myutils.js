@@ -1,13 +1,5 @@
 module.exports = {
 
-    testme: function () {
-
-        let testval = 'I am a test string';
-
-        return `${testval}`;
-
-    },
-
     makeShortDate: function (datein) {
         let d = Date(datein);
         return String(d.getDate()) + '/' + String(d.getMonth()) + '/' + String(d.getFullYear());
